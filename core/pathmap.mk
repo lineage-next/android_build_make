@@ -169,3 +169,6 @@ FRAMEWORKS_DATA_BINDING_SUBDIRS := \
 FRAMEWORKS_DATA_BINDING_JAVA_SRC_DIRS := \
 	$(addprefix frameworks/data-binding/,$(FRAMEWORKS_DATA_BINDING_SUBDIRS))
 
+ifneq ($(LINEAGE_BUILD),)
+-include $(TOPDIR)vendor/lineage/build/core/pathmap.mk
+endif
